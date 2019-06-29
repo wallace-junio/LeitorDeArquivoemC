@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdio.h>
+#include<stdlib.h> 
+/*
+    Elabore  um  programa  em  C  para  ler  N números  inteiros de um arquivo texto
+e informar qual é o MAIOR e qual é o MENOR valor lido.
+
+*/
+
+int main() {
+	
+	int n1,n2,maior;
+	
+	FILE *arq;
+	arq = fopen("n1.txt","r");
+	
+	if(arq == NULL){
+		printf("\nProblema na abertura do arquivo");
+		return 0;
+	}
+	
+	printf("\n *** [ PROGRAMA ] *** ");
+	printf("\n========================");
+	
+	while(!feof(arq)){
+		fscanf(arq,"%d",&n1);
+		if(n1>n2){
+			maior = n1;
+		
+		}
+		else
+		if(n2>n1)
+		{
+			maior = n2; 
+		}else{
+			maior = n1;
+			
+		}	
+		
+	}
+	
+	printf("\nMaior numero eh :%d",maior);	
+}
